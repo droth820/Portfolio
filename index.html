@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet'>
+
+</head><body>
+
+<div class="container"><!--Begin Container div-->
+  <div class="row">
+    <div class="col-md-12 text-right text-uppercase">
+      <h1 class="super-title">David Roth</h1>
+      <h3>Front-end Ninja</h3>
+      <h4><a href="resume.html" target="_blank">My Resume</a></h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12"> </div>
+    <hr class="rule">
+  </div>
+
+  <div class="featuredWork">
+    <div class="container intro"><!--holds marquee image-->
+      <div class="row-center">
+        <div class="col-md-12"><img class="img-responsive" src="images/codeImage.jpg" alt="Code image"></div>
+      </div>
+    </div><!--End of container intro div-->
+    <!--The following rows display the main content area containing completed projects for portfolio-->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-muted text-large">Featured Work</h2>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-6"> <img class="img-responsive project-image" src="images/frogger.jpg" alt="Frogger game image" data-toggle="modal" data-target="#project1">
+        <h3 class="text-muted">Frogger Game Clone</h3>
+        <p><a href="http://droth820.github.io/frontend-nanodegree-arcade-game/" target="_blank">Play game here.</a></p>
+      </div>
+      <div class="col-md-6"> <img class="img-responsive project-image" src="images/egs.jpg" alt="Jarhead Professionals" data-toggle="modal" data-target="#project2">
+        <h3 class="text-muted">EGS Portfolio</h3>
+        <p><a href="http://www.egss.biz/" target="_blank">EGS Solutions, LLC</a></p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+    <div class="col-md-6"> <img class="img-responsive project-image" src="images/spaceDefender.jpg" alt="Space Wars" data-toggle="modal" data-target="#project3">
+        <h3 class="text-muted">Space War Game Clone</h3>
+        <p><a href="http://droth820.github.io/canvas-game-bootstrap" target="_blank">Play game here.</a></p>
+      </div>
+      <div class="col-md-6"> <img class="img-responsive project-image" src="images/JHP.jpg" alt="Jarhead Professionals" data-toggle="modal" data-target="#project4">
+        <h3 class="text-muted">Jarhead Professionals</h3>
+        <p><a href="http://jarheadpros.com" target="_blank">www.jarheadpros.com</a></p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-6"> <img class="img-responsive project-image" src="images/meme.jpg" alt="Meme Generator" data-toggle="modal" data-target="#project5">
+        <h3 class="text-muted">Meme Generator</h3>
+        <p><a href="meme.html">Create a Meme</a></p>
+      </div>
+      <div class="col-md-6"> <img class="img-responsive project-image" src="images/millennium_thumb.jpg" alt="Millenium Endodontics" data-toggle="modal" data-target="#project6">
+        <h3 class="text-muted">Millenium Endodontics</h3>
+        <p><a href="http://millenniumendo.com/" target="_blank">www.milleniumendo.com</a></p>
+      </div>
+      </div>
+      <div class="row text-center">
+      <div class="col-md-6"> <img class="img-responsive project-image" src="images/globalWarming.jpg" alt="Physical Geo website" data-toggle="modal" data-target="#project7">
+        <h3 class="text-muted">Physical Geography Help Application</h3>
+        <p><a href="#">Global Warming</a></p>
+      </div>
+      <div class="col-md-6"> <img class="img-responsive project-image" src="images/mathHelpThumb.jpg" alt="Math and Science Help website" data-toggle="modal" data-target="#project8">
+        <h3 class="text-muted">Math and Science Help Application</h3>
+        <p><a href="#">Math Help</a></p>
+      </div>
+    </div><!--End of displayed projects in portfoliio-->
+  </div>
+</div><!--End of container div-->
+
+<!--Modals contain detailed project information-->
+<!-- Modal -->
+<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel1">Frontend Developer Program Udacity</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/frogger.jpg" alt="Jarhead Pros thumbnail"> The purpose of this project was to practice OOP by creating a video game using HTML5 canvas and JavaScript. During this project I recreated the classic arcade game Frogger by creating classes containing specific class related properties as well as various functions to implement the game.</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal-->
+<div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel2">EGS Solutions, LLC</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/egs.jpg" alt="Millenium Endo thumbnail"> The purpose of this project was to take what I had learned in Udacity's Front-end Developer course and create a working, professional, portfolio that Mr. Salgian could display on both his website and Linkedin profile. This project was created using HTML5, Jquery, Bootstrap, and CSS. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel3">Game Development Practice</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/spaceDefender.jpg" alt="Jarhead Pros thumbnail"> this project was created as part of a tutorial that I completed to practice OOP skills. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="project4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel4">Jarhead Pros</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/JHP.jpg" alt="Jarhead Pros thumbnail"> This project was created for a veteran's service organization. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal-->
+<div class="modal fade" id="project5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel5">Meme Generator</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/meme.jpg" alt="Math Help thumbnail"> This meme generator was a project I completed for Udacity's HTML5 Canvas course. Simply select an image from your computer, write a caption, and click save to save to your computer.</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal-->
+<div class="modal fade" id="project6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel6">Millenium Endodontics</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/millennium_thumb.jpg" alt="Millenium Endo thumbnail"> The Millennium Endodontics website was developed for a dental specialist in Mesa Arizona. Features include a patient contact form, and interactive map, slide show and video. This site was developed with HTML, CSS, and JQuery. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Modal-->
+<div class="modal fade" id="project7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel7" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel7">Physical Geo Application</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/globalWarming.jpg" alt="Physical Geo thumbnail"> This project was created to help 9th grade science students learn concepts around the topic of Global Warming. I built this website using Illustrator, Photoshop, and Flash. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="project8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel8">Math Help For 9th Grade Physical Science Students</h4>
+      </div>
+      <div class="modal-body"> <img class="img-responsive" src="images/mathHelpThumb.jpg" alt="Math Help thumbnail"> As a high school science teacher I was always looking for ways to integrate technology within the curriculum. While teaching a course on Physical Science I realized that most of my students did not have requisite skills in math to be successful in this course. The intent was to make the landing page, shown above, look like a computer interface with blinking lights and a rotating fan. I constructed this website using Illustrator, Photoshop, and Flash. </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
