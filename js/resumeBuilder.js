@@ -1,7 +1,6 @@
-
 //Prepend name and role to beginning of header tag
 var name = "David Roth"
-var formattedName = HTMLheaderName.replace( "%data%", name);
+var formattedName = HTMLheaderName.replace( "%data%", name+" ");
 
 var role = "Web Developer"
 var formattedRole = HTMLheaderRole.replace("%data%", role);
@@ -27,7 +26,7 @@ var bio = {
 var headShot = HTMLbioPic.replace("%data%", bio.bioPic);
 $("#header").prepend(headShot);
 
-$("#main").append(bio.contacts.location);
+//$("#main").append(bio.contacts.location);
 
 //Contact Information.
 var contact = {
@@ -35,6 +34,7 @@ var contact = {
     "email": "rothd@cox.net",
     "linkedin": "<a href='www.linkedin.com/in/davidroth3/' target='_blank'>LinkedIn</a>"
 }
+
 //Work object
 var work = {
     "jobs": [
@@ -73,8 +73,8 @@ var work = {
 var courses = {
     "courses":[
         {
-            "title": "Front-End Web Developer",
-           "school": "<a href='https://www.udacity.com/' target='_blank'>Udacity</a>",
+            "title": "Front-End Web Developer Nanodegree Program",
+           "school": "<a class='link' href='https://www.udacity.com/' target='_blank'>Udacity</a>",
             "dates": "2014",
             "description": "Currently enrolled in Udacity's front-end developer course. Within this course I am continuing my programming education with an emphasis in creating interactive modern websites using HTML, CSS, and JavaScript."
         },
@@ -86,13 +86,13 @@ var courses = {
         },
         {
             "title": "JavaScript Developer",
-            "school": "<a href='http://www.w3schools.com/' target='_blank'>W3Schools</a>",
+            "school": "<a href='https://webmail.west.cox.net/do/redirect?url=http%253A%252F%252Fwww.refsnesdata.no%252Fcertification%252Fw3certified.asp%253Femail%253Drothd%2540cox.net' target='_blank'>W3Schools</a>",
             "dates": "2013",
             "description": "Completed course on JavaScript development."
         },
         {
             "title": "CSS3",
-            "school": "<a href='http://www.w3schools.com/' target='_blank'>W3Schools</a>",
+            "school": "<a href='https://webmail.west.cox.net/do/redirect?url=http%253A%252F%252Fwww.refsnesdata.no%252Fcertification%252Fw3certified.asp%253Femail%253Drothd%2540cox.net' target='_blank'>W3Schools</a>",
             "dates": "2013",
             "description": "Completed course on CSS3."
         }
@@ -107,15 +107,8 @@ var projects = {
             "description": "Jarhead Professionals is an organization allowing former U.S. Marines to socialize, network, and help others transition from military to civilian life. The purpose of this website is to keep members informed of upcoming events as well as advertise to potential members.",
             "images": "#"
         },
-
-        {
-            "title": "<a href='http://millenniumendo.com/' target='_blank'>Millenium Edndodontics</a>",
-            "dates": "2013",
-            "description": "This website was created to showcase Dr. Miller's practice. This website contains a contact form, interactive slide show, video, and Google map.",
-            "images": "#"
-        },
-
-        {
+  		
+  		{
             "title": "<a href='http://droth820.github.io/frontend-nanodegree-arcade-game' target='_blank'>Frogger Game Clone</a>",
             "dates": "October - November 2014",
             "description": "This project was completed as part of the Frontend Nanodegree program at Udacity. This project demonstrates OOP skills with JavaScript using the MVC method.",
@@ -141,13 +134,19 @@ var projects = {
             "dates": "November 2014",
             "description": "This project was created to practice and improve upon my skills writting JavaScript. Specifically in the area of OOP and game physics.",
             "images": "#"
+        },
+
+         {
+            "title": "<a href='http://millenniumendo.com/' target='_blank'>Millenium Edndodontics<a>",
+            "dates": "2013",
+            "description": "This website was created to showcase Dr. Miller's practice. This website contains a contact form, interactive slide show, video, and Google map.",
+            "images": "#"
         }
 
         
 
     ]
 }
-
 //Object literal notation using JASON
 var education = {
     "education": [
@@ -177,8 +176,6 @@ var education = {
     ]
 }
 
-
-
 $("#main").append(education.name, education.location, education.years);
 $("#main").append(work.empolyer, work.position, work.years);
 
@@ -202,15 +199,19 @@ for(job in work.jobs){
     $("#workExperience").append(HTMLworkStart);
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
     $(".work-entry:last").append(formattedEmployer);
+
     var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
     $(".work-entry:last").append(formattedLocation);
+
     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     $(".work-entry:last").append(formattedTitle);
+
     var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
     $(".work-entry:last").append(formattedDates);
+
     var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
     $(".work-entry:last").append(formattedDescription);
-    
+     
 }
 }
 displaysWork();
@@ -246,7 +247,7 @@ courses.display = function(){
 
         var formattedName = HTMLonlineSchool.replace("%data%", courses.courses[item].school);
         $(".course-entry:last").append(formattedName);
-        
+
         var formattedTitle = HTMLonlineTitle.replace("%data%",courses.courses[item].title);
         $(".course-entry:last").append(formattedTitle);
 
@@ -255,6 +256,10 @@ courses.display = function(){
 
         var formattedDescription = HTMLonlineDescription.replace("%data%", courses.courses[item].description);
         $(".course-entry:last").append(formattedDescription);
+
+        
+
+        
 
 
     }
@@ -269,6 +274,9 @@ education.display = function(){
         var formattedName = HTMLschoolName.replace("%data%", education.education[edu].school);
         $(".education-entry:last").append(formattedName);
 
+        var formattedDates = HTMLschoolDates.replace("%data%", education.education[edu].dates);
+        $(".education-entry:last").append(formattedDates);
+
         var formattedLocation = HTMLschoolLocation.replace("%data%", education.education[edu].location);
         $(".education-entry:last").append(formattedLocation);
 
@@ -276,15 +284,10 @@ education.display = function(){
         $(".education-entry:last").append(formattedDegree, " ");
 
         var formattedMajor = HTMLschoolMajor.replace("%data%", education.education[edu].major);
-        $(".education-entry:last").append(formattedMajor);
-
-        var formattedDates = HTMLschoolDates.replace("%data%", education.education[edu].dates);
-        $(".education-entry:last").append(formattedDates, "<br>");
+        $(".education-entry:last").append(formattedMajor); 
     }
 }
 education.display();
-
-
 
 //Allows for user to click on button to change name format.
 function inName(name){
@@ -299,6 +302,28 @@ $("#main").prepend(internationalizeButton);
 
 //Add Google map to display where I have lived and worked.
 $("#mapDiv").append(googleMap);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

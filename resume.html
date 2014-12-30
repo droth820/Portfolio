@@ -15,7 +15,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
-  <link href="css/resumeStyle.css" rel="stylesheet" type="text/css"></link>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>New Resume</title>
+
+  <!-- Load the page styles. -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -34,13 +41,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
-  <title>David's Resume</title>
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -52,10 +58,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content">
-      <ul class='content'>
-        <li><span class='contactInfo'>MOBILE:</span> 480.223.3849&nbsp;</li>
-        <li><span class='contactInfo'>EMAIL:</span>rothd@cox.net&nbsp;</li>
+    <div id="header" class="center-content clearfix">
+      <ul id="topContacts" class='flex-box, content'>
+        <li><span class='orange-text'>MOBILE: </span class="white-text"><a href="tel:+14802233849">&nbsp;480.223.3849</a> &nbsp;</li>
+        <li><span class='orange-text'>EMAIL: <a href='mailto:rothd@cox.net'>&nbsp;rothd@cox.net</a>&nbsp;</li>
+      </ul>
       </ul>
     </div>
     <div style='clear: both;'></div>
@@ -71,16 +78,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="onlineCourses">
       <h2>Online Courses</h2>
     </div>
-    <div id="mapDiv" class="gray">
-      <h2>Where I've Worked</h2>
+    <div id="mapDiv">
+      <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="letsConnect" class='dark-gray'>
-      <h2 class='grey center-text'>Let's Connect</h2>
-      <ul class='content'>
-        <li><span class='contactInfo'>MOBILE:</span> 480.223.3849 &nbsp;</li>
-        <li><span class='contactInfo'>EMAIL:<a href='mailto:rothd@cox.net'>rothd@cox.net</a>&nbsp;</li>
-      </ul>
-      <ul id="footerContacts" class="flex-box">
+      <h2 class='orange center-text'>Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box, content">
+          <li><span class='orange-text'>MOBILE: </span class="white-text"><a href="tel:+14802233849">&nbsp;480.223.3849</a> &nbsp;</li>
+        <li><span class='orange-text'>EMAIL: <a href='mailto:rothd@cox.net'>&nbsp;rothd@cox.net</a>&nbsp;</li>
       </ul>
     </div>
   </div>
@@ -102,43 +107,44 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
 
   <script type="text/javascript">
-  // Notice how all of a sudden there's JavaScript inside this HTML
-  // document? You can write JavaScript between <script> tags. At the end of your 
-  // JavaScript, don't forget the closing script tag with the slash (/).
+    // Notice how all of a sudden there's JavaScript inside this HTML
+    // document? You can write JavaScript between <script> tags. At the end of your
+    // JavaScript, don't forget the closing script tag with the slash (/).
 
 
-  // Also, this is a JavaScript style comment. You can comment in JavaScript with:
+    // Also, this is a JavaScript style comment. You can comment in JavaScript with:
 
-  //   two slashes for all following characters on a single line, or
+    //   two slashes for all following characters on a single line, or
 
-  /*
-      an opening and closing set of slash asterisks for block comments.
-  */
+    /*
+        an opening and closing set of slash asterisks for block comments.
+    */
 
 
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("topContacts").style.backgroundColor = "000000";
-  }
-  if(document.getElementsByTagName("h1").length === 0) {
-    document.getElementById("header").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("work-entry").length === 0) {
-    document.getElementById("workExperience").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("project-entry").length === 0) {
-    document.getElementById("projects").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("education-entry").length === 0) {
-    document.getElementById("education").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("course-entry").length === 0) {
-    document.getElementById("onlineCourses").style.backgroundColor = "black";
-  }
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("letsConnect").style.backgroundColor = "black";
-  }
-  if(document.getElementById("map") == undefined) {
-    document.getElementById("mapDiv").style.backgroundColor = "black";
-  }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if(document.getElementsByClassName('course-entry').length === 0) {
+      document.getElementById('onlineCourses').style.display = 'none';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.display = 'none';
+    }
+    if(document.getElementById('map') === undefined) {
+      document.getElementById('mapDiv').style.display = 'black';
+    }
   </script>
 </body>
+</html>
